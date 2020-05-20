@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block titolo%}
+    {{block.super}} | FORM 
+{%endblock titolo%}
+{%block contenuti%}
+{% if menu %}
+    <ol>
+        {% for voce in menu %}
+        <!--  <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        hardcode link no good-->
+        <li><a href="{{ voce }}">{{ voce }}</a></li>
+        {% endfor %}
+        </ol>
+        {% else %}
+    <p>No app are available.</p>
+{% endif %}
+{%endblock contenuti%}

@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{% block head_title %}{{ block.super }} - {{ user }}{% endblock head_title %}
+
+{%block contenuti%}
+
+    <div class="row">
+        <div class="col-4">
+            <div class="card my-2">
+                <div class="card-header">
+                    <h3>{{post.titolo}}</h3>
+                </div>
+                <div class="card-body">
+                    <h3>{{post.contenuto}}</h3>
+                </div>
+                <div class="card-footer">
+                    <h3>{{post.autore}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{%endblock contenuti%}
